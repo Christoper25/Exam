@@ -1,0 +1,41 @@
+/*Resets*/
+%reset {
+  margin: 0;
+  padding:0;
+}
+
+html,body,div,h1,h2,h3,h4,h5,h6,ul,ul li,p,span{
+  @extend %reset;
+}
+ul{
+  list-style:none;
+}
+
+a{text-decoration:none;}
+
+%box-sizing{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; image-rendering:
+  -webkit-optimize-contrast;
+}
+
+*{
+  @extend %box-sizing;
+  :before,:after{
+    @extend %box-sizing;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity:1;
+}
+::-moz-placeholder {
+  @extend ::-webkit-input-placeholder;
+}
+:-ms-input-placeholder {
+  @extend ::-webkit-input-placeholder;
+}
+:-moz-placeholder {
+  @extend ::-webkit-input-placeholder;
+}
